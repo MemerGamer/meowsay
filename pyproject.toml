@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "meowspeak"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
   { name="Kovács Bálint-Hunor", email="kovacsbalinthunor53@gmail.com" },
 ]
@@ -24,4 +24,4 @@ Issues = "https://github.com/MemerGamer/meowspeak/issues"
 
 # Define entry points for the command line interface
 [project.scripts]
-meowspeak = "meowspeak.meowsay:main"
+meowspeak = "meowspeak.meowspeak:main"
