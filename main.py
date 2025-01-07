@@ -173,17 +173,33 @@ def meowsay(message, cat_index=None, width=40):
     print(f"{speech_bubble}\n{cat}")
 
 
+def list_cats():
+    """Lists all available cats with their index."""
+    for index, cat in enumerate(CATS):
+        print(f"Cat {index}:\n{cat}\n{'-' * 40}")
+
+
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="meowsay: Cats that say things!")
-    parser.add_argument("message", help="The message for the cat to say.")
+    parser.add_argument("message", nargs="?", help="The message for the cat to say.")
     parser.add_argument(
         "--cat", type=int, help="The index of the cat to use (0-based)."
     )
     parser.add_argument(
         "--width", type=int, default=40, help="Width of the message bubble."
     )
+    parser.add_argument(
+        "--list",
+        action="store_true",
+        help="List all available cats with their indices.",
+    )
     args = parser.parse_args()
 
-    meowsay(args.message, args.cat, args.width)
+    if args.list:
+        list_cats()
+    elif args.message:
+        meowsay(args.message, args.cat, args.width)
+    else:
+        parser.print_help()
