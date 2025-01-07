@@ -129,7 +129,7 @@ CATS = [
 ]
 
 
-def meowsay(message, cat_index=None, width=40):
+def meowspeak(message, cat_index=None, width=40):
     """
     Displays a message "spoken" by an ASCII cat.
 
@@ -182,7 +182,7 @@ def list_cats():
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="meowsay: Cats that say things!")
+    parser = argparse.ArgumentParser(description="meowspeak: Cats that say things!")
     parser.add_argument("message", nargs="?", help="The message for the cat to say.")
     parser.add_argument(
         "--cat", type=int, help="The index of the cat to use (0-based)."
@@ -200,6 +200,6 @@ if __name__ == "__main__":
     if args.list:
         list_cats()
     elif args.message:
-        meowsay(args.message, args.cat, args.width)
+        meowspeak(args.message, args.cat, args.width)
     else:
         parser.print_help()

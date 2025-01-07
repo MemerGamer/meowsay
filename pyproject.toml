@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meowspeak"
+version = "1.0.0"
+authors = [
+  { name="Kovács Bálint-Hunor", email="kovacsbalinthunor53@gmail.com" },
+]
+description = "Displays a message 'spoken' by an ASCII cat"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/MemerGamer/meowspeak/"
+Issues = "https://github.com/MemerGamer/meowspeak/issues"
