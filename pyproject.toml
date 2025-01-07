@@ -22,10 +22,6 @@ classifiers = [
 Homepage = "https://github.com/MemerGamer/meowspeak/"
 Issues = "https://github.com/MemerGamer/meowspeak/issues"
 
-[tool.setuptools]
-packages = ["meowspeak"]
-
-[tool.setuptools.entry_points]
-console_scripts = [
-    "meowspeak = meowspeak.meowspeak:main"
-]
+# Define entry points for the command line interface
+[project.scripts]
+meowspeak = "meowspeak.meowsay:main"
