@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "meowspeak"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="Kovács Bálint-Hunor", email="kovacsbalinthunor53@gmail.com" },
 ]
@@ -21,3 +21,11 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/MemerGamer/meowspeak/"
 Issues = "https://github.com/MemerGamer/meowspeak/issues"
+
+[tool.setuptools]
+packages = ["meowspeak"]
+
+[tool.setuptools.entry_points]
+console_scripts = [
+    "meowspeak = meowspeak.meowspeak:main"
+]

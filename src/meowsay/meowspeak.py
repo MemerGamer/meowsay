@@ -179,7 +179,7 @@ def list_cats():
         print(f"Cat {index}:\n{cat}\n{'-' * 40}")
 
 
-if __name__ == "__main__":
+def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="meowspeak: Cats that say things!")
@@ -203,3 +203,7 @@ if __name__ == "__main__":
         meowspeak(args.message, args.cat, args.width)
     else:
         parser.print_help()
+
+
+if __name__ == "__main__":
+    main()
